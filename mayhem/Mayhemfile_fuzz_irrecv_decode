@@ -1,0 +1,9 @@
+project: savantenvs/IRremoteESP8266
+target: fuzz_irrecv_decode
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_irrecv_decode/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_irrecv_decode
+    libfuzzer: true
+    timeout: 5
